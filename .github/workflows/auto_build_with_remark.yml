@@ -2,7 +2,7 @@ name: Auto Build with remark
 
 on:
   schedule:
-    - cron: 0 6 * * *
+    - cron: 2 0-20 * * *
   push:
     branches:
       - main
