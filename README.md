@@ -1,4 +1,11 @@
-# q215613905-Tbox
+# TVBoxXD
+
+[![AutoBuildTest](https://github.com/chengxue2020/q215613905-Tbox/actions/workflows/auto_build_with_remark.yml/badge.svg)](https://github.com/chengxue2020/q215613905-Tbox/actions/workflows/auto_build_with_remark.yml)
+[![Download](https://img.shields.io/github/v/release/chengxue2020/q215613905-Tbox?color=green&logoColor=green&label=Download&logo=DocuSign)](https://github.com/chengxue2020/q215613905-Tbox/releases)
+
+
+-
+- # q215613905-Tbox
 复刻自TG群俊于phper的库：https://github.com/q215613905/TVBoxOS/ 
 
 
