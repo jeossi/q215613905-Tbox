@@ -3,10 +3,6 @@ package com.github.tvbox.osc.util;
 import android.content.Context;
 import android.util.Log;
 
-import com.github.tvbox.osc.event.LogEvent;
-
-import org.greenrobot.eventbus.EventBus;
-
 import com.github.tvbox.osc.base.App;
 
 import java.io.File;
@@ -24,24 +20,8 @@ public class LOG {
     private static int saveDay = 2;
     private static File file;
 
-    public static void e(Throwable t) {
-        Log.e(TAG, t.getMessage(), t);
-        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", TAG) + Log.getStackTraceString(t)));
-    }
-
-    public static void e(String tag, Throwable t) {
-        Log.e(tag, t.getMessage(), t);
-        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", tag) + Log.getStackTraceString(t)));
-    }
-
-    public static void e(String msg) {
-        Log.e(TAG, "" + msg);
-        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", TAG) + msg));
-    }
-
-    public static void e(String tag, String msg) {
-        Log.e(tag, msg);
-        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", tag) + msg));
+    public static void i(Object... msgs){
+        LogPrint(Log.INFO, FormatMsg(msgs));
     }
 
     public static void d(Object... msgs){
@@ -125,10 +105,5 @@ public class LOG {
     private static void WriteFile(int logType, String msg){
         if (isSaveLog && file!=null)
             FileUtils.appendFile(file, String.format("%s   %s\n", logType, msg));
-    }
-
-    public static void i(String tag, String msg) {
-        Log.i(tag, msg);
-        EventBus.getDefault().post(new LogEvent(String.format("I/%s ==> ", tag) + msg));
     }
 }
