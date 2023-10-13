@@ -21,7 +21,11 @@ public class LOG {
     private static int saveDay = 2;
     private static File file;
 
-    public static void e(Throwable t) {
+    public static void i(Object... msgs){
+        LogPrint(Log.INFO, FormatMsg(msgs));
+    }
+	
+	public static void e(Throwable t) {
         Log.e(TAG, t.getMessage(), t);
         EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", TAG) + Log.getStackTraceString(t)));
     }
