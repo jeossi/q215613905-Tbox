@@ -124,4 +124,3 @@ public class LOG {
             FileUtils.appendFile(file, String.format("%s   %s\n", logType, msg));
     }
 }
-}
