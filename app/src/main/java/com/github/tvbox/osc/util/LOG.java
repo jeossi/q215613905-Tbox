@@ -34,7 +34,7 @@ public class LOG {
 */    public static void e(String msg) {
 */        Log.e(TAG, "" + msg);
 */        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", TAG) + msg));
-    }
+*/    }
 
     public static void e(String tag, String msg) {
         Log.e(tag, msg);
@@ -44,7 +44,7 @@ public class LOG {
 */    public static void i(String msg) {
 */        Log.i(TAG, msg);
 */        EventBus.getDefault().post(new LogEvent(String.format("I/%s ==> ", TAG) + msg));
-    }
+*/    }
 
     public static void i(String tag, String msg) {
         Log.i(tag, msg);
