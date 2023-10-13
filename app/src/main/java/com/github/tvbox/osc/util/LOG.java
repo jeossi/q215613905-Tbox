@@ -31,20 +31,10 @@ public class LOG {
         EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", tag) + Log.getStackTraceString(t)));
     }
 
-*/    public static void e(String msg) {
-*/        Log.e(TAG, "" + msg);
-*/        EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", TAG) + msg));
-*/    }
-
     public static void e(String tag, String msg) {
         Log.e(tag, msg);
         EventBus.getDefault().post(new LogEvent(String.format("E/%s ==> ", tag) + msg));
     }
-
-*/    public static void i(String msg) {
-*/        Log.i(TAG, msg);
-*/        EventBus.getDefault().post(new LogEvent(String.format("I/%s ==> ", TAG) + msg));
-*/    }
 
     public static void i(String tag, String msg) {
         Log.i(tag, msg);
