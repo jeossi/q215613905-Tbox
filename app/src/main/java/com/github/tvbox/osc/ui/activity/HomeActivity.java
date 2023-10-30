@@ -628,7 +628,7 @@ public class HomeActivity extends BaseActivity {
             ConstraintLayout cl_root = dialog.findViewById(R.id.cl_root);
             ViewGroup.LayoutParams clp = cl_root.getLayoutParams();
             clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 380+200*spanCount);
-            dialog.setTip("Ajeossi：请选择有眼缘的首页数据源");
+            dialog.setTip("Ajeossi：请选择喜欢的首页数据源");
             dialog.setAdapter(new SelectDialogAdapter.SelectDialogInterface<SourceBean>() {
                 @Override
                 public void click(SourceBean value, int pos) {
