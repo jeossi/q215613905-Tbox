@@ -130,7 +130,7 @@ public class ApiConfig {
     }
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://jihulab.com/je/t/-/raw/main/jeko_my.json");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://raw.gitcode.com/jeo/t/raw/main/y01.json");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
